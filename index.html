@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free HTML5 Games Site - GameCoin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+    #top-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ff4081;
+      padding: 12px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      z-index: 1100;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    #top-banner span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+    .header {
+      padding: 30px 15px;
+      text-align: center;
+      background-color: rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      border-radius: 15px;
+    }
+    .header img {
+      width: 120px;
+      margin-bottom: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 0;
+    }
+    .game-card {
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      background-color: rgba(255,255,255,0.1);
+      overflow: hidden;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    .game-card img {
+      border-radius: 15px 15px 0 0;
+      max-height: 180px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+    .game-card .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    .btn-play {
+      background: #ff4081;
+      border: none;
+      font-weight: 600;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+    .btn-play:hover {
+      background: #e73370;
+      color: white;
+    }
+    #bottom-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #ff4081, #764ba2);
+      padding: 15px 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+      z-index: 1100;
+    }
+    #bottom-banner span {
+      animation: glow 2.5s ease-in-out infinite alternate;
+      text-shadow: 0 0 5px #fff, 0 0 10px #ff4081, 0 0 20px #ff4081;
+    }
+    @keyframes glow {
+      from {
+        opacity: 0.7;
+        text-shadow: 0 0 3px #fff, 0 0 8px #ff4081, 0 0 18px #ff4081;
+      }
+      to {
+        opacity: 1;
+        text-shadow: 0 0 8px #fff, 0 0 16px #ff4081, 0 0 30px #ff4081;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top-banner">
+    <span>Welcome to the Free HTML5 Games Site! Powered by GameCoin ($GAME) 🎮✨ | Built on Solana - The Fastest Blockchain 🚀 | Explore new tokens on <a href="https://pump.fun" target="_blank" style="color: yellow; text-decoration: underline;">pump.fun</a></span>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center px-4">
+    <button id="connect-wallet" class="btn btn-light btn-sm mt-3">🔌 Connect Wallet</button>
+    <button id="toggle-lang" class="btn btn-outline-light btn-sm mt-3">🌐 عربي</button>
+  </div>
+  <p id="wallet-address" class="text-center mt-2 small"></p>
+
+  <div class="container">
+    <header class="header">
+      <img src="images/gamecoin.png" alt="GameCoin Logo">
+      <h1>Free HTML5 Games</h1>
+      <p>Enjoy fun games with no downloads, no signups — just pure gaming powered by GameCoin ($GAME)</p>
+      <p class="mt-2"><strong>GameCoin Address:</strong> <code>7FiS8Wxf9ntZ3JuoSEu2RLjT2oNVUETNhvdy897xfXkC</code></p>
+    </header>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card game-card">
+          <img src="images/game1.jpg" alt="Stack Jump">
+          <div class="card-body">
+            <h5>Stack Jump</h5>
+            <a href="game1.html" class="btn btn-play">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card game-card">
+          <img src="images/game2.jpg" alt="Moto X3M">
+          <div class="card-body">
+            <h5>Moto X3M</h5>
+            <a href="game2.html" class="btn btn-play">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card game-card">
+          <img src="images/game3.jpg" alt="Tunnel Rush">
+          <div class="card-body">
+            <h5>Tunnel Rush</h5>
+            <a href="game3.html" class="btn btn-play">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom-banner">
+    <span>🎉 Earn and Play with GameCoin ($GAME) – Join the future of gaming!</span>
+  </div>
+
+  <script>
+    const walletBtn = document.getElementById("connect-wallet");
+    const addressDisplay = document.getElementById("wallet-address");
+
+    walletBtn.onclick = async () => {
+      if (window.solana && window.solana.isPhantom) {
+        try {
+          const resp = await window.solana.connect();
+          addressDisplay.innerText = `Wallet: ${resp.publicKey.toString()}`;
+        } catch (err) {
+          alert("Connection rejected.");
+        }
+      } else {
+        alert("Phantom wallet not found. Please install it.");
+      }
+    };
+
+    const toggleBtn = document.getElementById("toggle-lang");
+    let isArabic = false;
+    toggleBtn.onclick = () => {
+      isArabic = !isArabic;
+      document.querySelector(".header h1").innerText = isArabic ? "ألعاب HTML5 مجانية" : "Free HTML5 Games";
+      document.querySelector(".header p").innerText = isArabic
+        ? "استمتع بالألعاب بدون تحميل أو تسجيل، فقط ألعاب حقيقية مدعومة بعملة $GAME"
+        : "Enjoy fun games with no downloads, no signups — just pure gaming powered by GameCoin ($GAME)";
+      toggleBtn.innerText = isArabic ? "🌐 English" : "🌐 عربي";
+    };
+  </script>
+
+</body>
+</html>
